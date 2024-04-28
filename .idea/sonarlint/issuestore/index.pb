@@ -28,3 +28,7 @@ Q.idea/sonarlint/securityhotspotstore/d/8/d83ae3847b7d408136086cc5e9e95f5f7c126e
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
+]
+-src/main/kotlin/lesson_1/lesson_1_task_1.java,b\e\be0ab70ff2955df2137d28efbae7b4e012117971
+[
++src/main/kotlin/lesson_1/lesson_1_task_1.kt,3\7\37e53afa6bf7ecb4fd7d02d6e400988f3a03741d
