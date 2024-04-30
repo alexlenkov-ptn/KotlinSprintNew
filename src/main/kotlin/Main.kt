@@ -7,11 +7,12 @@ fun main() {
     println(countOfOrders)
     println(thanksMessage)
 
-    /* var countOfEmployees: Int = 2000
+    var countOfEmployees: Int = 2000
+    /*
     println(countOfEmployees)
-     */
+    */
 
-    var countOfEmployees: Int = 1999
+    countOfEmployees = 1999
     println(countOfEmployees)
 
 
