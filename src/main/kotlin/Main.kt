@@ -1,16 +1,44 @@
-package org.example
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    val year = 1961;
+    var hour = "09"
+    var minute = "07"
+    println(year)
+    println(hour)
+    println(minute)
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+    hour = "10"
+    minute = "55"
+
+    print(hour)
+    print(":")
+    print(minute)
 }
+
+
+
+
+
+
+/*
+
+Задача 3 к Уроку 1
+
+В любом учебнике есть задачи про космос. Объяви переменные и выведи данные о полете в космос первого человека.
+
+ – Запиши в новую переменную year год полета Юрия Гагарина в космос;
+ – Объяви и проинициализируй переменные hour и minute – час и минуту взлета соответственно;
+ – Выведи год, час и минуту взлета по одной переменной на каждую строку;
+ – Затем измени значения переменных hour и minute, чтобы они теперь имели значение часа и минуты посадки;
+ – Выведи время посадки в одной строке в формате [часы:минуты]. Пример: 10:55.
+
+Определи, где в программе переменные должны задаваться через val, а где через var.
+
+Данные для задачи:
+Год полета – 1961
+Взлет – 09:07
+Посадка – 10:55
+
+Подсказка для вывода: какой метод печати в консоль не делает перенос в конце строки?
+
+*/
