@@ -31,7 +31,7 @@ fun main() {
         secondsSpendString = "0" + secondsSpendString
     }
 
-    println("%02d:%02d:%02d".format(hoursSpendString, minuteSpendString, secondsSpendString))
+    println("%s:%s:%s".format(hoursSpendString, minuteSpendString, secondsSpendString))
 
 }
 
