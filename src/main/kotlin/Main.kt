@@ -7,7 +7,7 @@ fun main() {
     val percent = 16.7 // P
     val duration = 20 // n
 
-    var result: Double = firstSum * (1 + percent / 100).pow(duration)
+    val result: Double = firstSum * (1 + percent / 100).pow(duration)
 
     println(String.format("%.3f", result))
 
