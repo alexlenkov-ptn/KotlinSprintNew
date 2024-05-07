@@ -4,7 +4,7 @@
 fun main() {
 
     var greeting = "Доброе утро"
-    var name = "юзернейм"
+    val name = "юзернейм"
     println("$greeting, $name")
     greeting = "Добрый вечер"
     println("$greeting, $name")
