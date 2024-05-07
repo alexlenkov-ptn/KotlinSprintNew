@@ -1,10 +1,12 @@
-fun main() {
+const val ONEHUNDREDPERCENT = 100
 
+fun main() {
+    val twentyPercent = 20
     val crystals = 7.0
     val iron = 11.0
 
-    var crystalsBonus = crystals / 100 * 20
-    var ironBonus = iron / 100 * 20
+    val crystalsBonus = crystals / ONEHUNDREDPERCENT * twentyPercent
+    val ironBonus = iron / ONEHUNDREDPERCENT * twentyPercent
 
     println(crystalsBonus.toInt())
     println(ironBonus.toInt())
