@@ -1,10 +1,10 @@
 
 
 fun main() {
-    var countOfEmployee = 50
-    var salaryOfEmployee = 30_000
-    var countOfIntern = 30
-    var salaryOfIntern = 20_000
+    val countOfEmployee = 50
+    val salaryOfEmployee = 30_000
+    val countOfIntern = 30
+    val salaryOfIntern = 20_000
 
     var salaryOfEmployeeSum = countOfEmployee * salaryOfEmployee
     var salarySum = salaryOfEmployeeSum + (countOfIntern * salaryOfIntern)
