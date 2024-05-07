@@ -1,5 +1,5 @@
 fun main() {
-    var count = 9
+    val count = 9
 
     print("""
         |$count * 1 = ${count*1}
