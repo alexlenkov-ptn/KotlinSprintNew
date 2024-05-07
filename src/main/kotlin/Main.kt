@@ -1,7 +1,7 @@
 fun main() {
-    var positionNumber = 2
-    var positionLetter = "D"
-    var moveNumber = 5
+    val positionNumber = 2
+    val positionLetter = "D"
+    val moveNumber = 5
 
     println("Фигура двинулась вперед с позиции $positionLetter$positionNumber на позицию " +
             "$positionLetter${positionNumber+1} " +
