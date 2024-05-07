@@ -4,8 +4,8 @@ fun main() {
 
 
     val firstSum = 70_000 // A
-    var percent = 16.7 // P
-    var duration = 20 // n
+    val percent = 16.7 // P
+    val duration = 20 // n
 
     var result: Double = firstSum * (1 + percent / 100).pow(duration)
 
