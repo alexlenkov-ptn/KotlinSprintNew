@@ -6,9 +6,9 @@ fun main() {
     val countOfIntern = 30
     val salaryOfIntern = 20_000
 
-    var salaryOfEmployeeSum = countOfEmployee * salaryOfEmployee
-    var salarySum = salaryOfEmployeeSum + (countOfIntern * salaryOfIntern)
-    var salaryAverage = salarySum / (countOfIntern + countOfEmployee)
+    val salaryOfEmployeeSum = countOfEmployee * salaryOfEmployee
+    val salarySum = salaryOfEmployeeSum + (countOfIntern * salaryOfIntern)
+    val salaryAverage = salarySum / (countOfIntern + countOfEmployee)
 
     println("Расходы на выплату зарплаты постоянных сотрудников: " + salaryOfEmployeeSum)
     println("Общие расходы по ЗП после прихода стажеров: " + salarySum)
