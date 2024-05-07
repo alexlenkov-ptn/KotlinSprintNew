@@ -1,8 +1,8 @@
 fun main() {
 
-    var firstName = "Татьяна"
+    val firstName = "Татьяна"
     var secondName = "Андреева"
-    var middleName = "Сергеевна"
+    val middleName = "Сергеевна"
 
     var age = 20
     println("$secondName $firstName $middleName, $age лет")
