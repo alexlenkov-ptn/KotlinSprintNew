@@ -1,7 +1,11 @@
-
-
 fun main() {
-    print(String.format("%.2f", ((3+4+3+5).toFloat() / 4)))
+
+    var studentsMark1 = 3
+    var studentsMark2 = 4
+    var studentsMark3 = 3
+    var studentsMark4 = 5
+    var countStudents = 4
+    print(String.format("%.2f", ((studentsMark1 + studentsMark2 + studentsMark3 + studentsMark4).toFloat() / countStudents)))
 
 }
 
