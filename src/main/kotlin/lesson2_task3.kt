@@ -1,6 +1,6 @@
+const val COUNT = 60
 
 fun main() {
-    val COUNT = 60
     var departureHour: Int = 9
     var departureMinute = 39
     var minuteOfTravelSum = 457
