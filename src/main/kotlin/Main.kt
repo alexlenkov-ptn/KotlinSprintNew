@@ -1,13 +1,13 @@
 fun main() {
-    var position = "D2-D4;0"
+    val position = "D2-D4;0"
 
-    var positionLetterFrom = position.substring(0,1)
-    var positionNumberFrom = position.substring(1,2).toInt()
+    val positionLetterFrom = position.substring(0,1)
+    val positionNumberFrom = position.substring(1,2).toInt()
 
-    var positionLetterWhere = position.substring(3,4)
-    var positionNumberWhere = position.substring(4,5).toInt()
+    val positionLetterWhere = position.substring(3,4)
+    val positionNumberWhere = position.substring(4,5).toInt()
 
-    var moveNumber = position.substring(6).toString()
+    val moveNumber = position.substring(6)
 
     print("""
         $positionLetterFrom$positionNumberFrom
