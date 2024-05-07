@@ -12,8 +12,6 @@ fun main() {
     println(String.format("%.3f", result))
 
 
-
-
 /*
 Формула сложного процента
 
