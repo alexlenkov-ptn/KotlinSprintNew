@@ -13,10 +13,24 @@ fun main() {
     val alternativeWeatherIsGood = true
 
     val realDamage = true
-    val realCountCrew = 85
+    val realCountCrew = 70
     val realBoxes = 50
     val realWeatherIsGood = true
 
+    println("Корабль может отправиться в плавание: " +
+            "${ (recommendDamage == realDamage // корабль не имеет повреждений
+                    && (recommendCountCrewMin <= realCountCrew || recommendCountCrewMax >= realCountCrew)
+                    //число экипажа составляет от 55 до 70 человек (включительно)
+                    && recommendBoxes < realBoxes
+                    // на борту есть более 50 ящиков провизии
+                    && (recommendWeatherIsGood == realWeatherIsGood || recommendWeatherIsGood != realWeatherIsGood))
+                    // погода благоприятная или неблагоприятная
+                    
+                    || (alternativeDamage == realDamage // наличие незначительных повреждений
+                    && alternativeCountCrew == realCountCrew // на борту рекомендованный состав экипажа - 70 человек;
+                    && alternativeWeatherIsGood == realWeatherIsGood // погода благоприятна
+                    && alternativeBoxes <= realBoxes) //  на борту есть 50 и более ящиков провизии
+            }")
 
 }
 
