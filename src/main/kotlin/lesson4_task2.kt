@@ -1,6 +1,6 @@
 const val AVERAGE_WEIGHT_MIN = 35
-const val averageWeightMax = 100
-const val averageVolumeMax = 100
+const val AVERAGE_WEIGHT_MAX = 100
+const val AVERAGE_VOLUME_MAX = 100
 
 fun main() {
     val goodsWeightFirst = 20
@@ -11,14 +11,16 @@ fun main() {
     println(
         "Груз с весом $goodsWeightFirst кг и объемом $goodsVolumeFirst л соответствует категории 'Average': " +
                 "${
-                    (goodsWeightFirst >= AVERAGE_WEIGHT_MIN && goodsWeightFirst <= averageWeightMax) &&
-                            goodsVolumeFirst < averageVolumeMax
+                    (goodsWeightFirst >= AVERAGE_WEIGHT_MIN &&
+                            goodsWeightFirst <= AVERAGE_WEIGHT_MAX) &&
+                            goodsVolumeFirst < AVERAGE_VOLUME_MAX
                 }\n" +
                 "Груз с весом $goodsWeightSecond кг и объемом $goodsVolumeSecond л соответствует категории 'Average': "
                 +
                 "${
-                    (goodsWeightSecond >= AVERAGE_WEIGHT_MIN && goodsWeightSecond <= averageWeightMax) &&
-                            averageVolumeMax < goodsVolumeSecond
+                    (goodsWeightSecond >= AVERAGE_WEIGHT_MIN &&
+                            goodsWeightSecond <= AVERAGE_WEIGHT_MAX) &&
+                            AVERAGE_VOLUME_MAX < goodsVolumeSecond
                 }"
     )
 }
