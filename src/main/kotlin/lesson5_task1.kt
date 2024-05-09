@@ -6,9 +6,9 @@ fun main() {
     println("Введите сумму чисел $firstCount и $secondCount")
     val result = readLine()!!.toInt()
 
-    if(result == (firstCount + secondCount)) {
+    if (result == (firstCount + secondCount)) {
         println("Добро пожаловать!")
-    }else {
+    } else {
         println("Доступ запрещен")
     }
 
