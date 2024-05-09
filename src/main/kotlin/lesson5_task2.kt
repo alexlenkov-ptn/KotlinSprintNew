@@ -2,7 +2,6 @@ import java.util.Calendar
 
 const val FULL_AGE = 18
 
-
 fun main() {
     val calendar: Calendar = Calendar.getInstance()
     val year = calendar.get(Calendar.YEAR)
