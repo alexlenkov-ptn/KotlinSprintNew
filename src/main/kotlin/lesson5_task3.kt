@@ -8,15 +8,21 @@ fun main() {
     println("Введите второе число")
     val secondUserCount = readLine()!!.toInt()
 
-    if (firstUserCount == FIRST_TRUE_COUNT || secondUserCount == SECOND_TRUE_COUNT ||
-        secondUserCount == FIRST_TRUE_COUNT || firstUserCount == SECOND_TRUE_COUNT) {
-        if((firstUserCount == FIRST_TRUE_COUNT && secondUserCount == SECOND_TRUE_COUNT) ||
-            (secondUserCount == FIRST_TRUE_COUNT && firstUserCount == SECOND_TRUE_COUNT)) {
+    if (firstUserCount == FIRST_TRUE_COUNT ||
+        secondUserCount == SECOND_TRUE_COUNT ||
+        secondUserCount == FIRST_TRUE_COUNT ||
+        firstUserCount == SECOND_TRUE_COUNT
+    ) {
+        if ((firstUserCount == FIRST_TRUE_COUNT &&
+                    secondUserCount == SECOND_TRUE_COUNT) ||
+            (secondUserCount == FIRST_TRUE_COUNT &&
+                    firstUserCount == SECOND_TRUE_COUNT)
+        ) {
             println("Поздравляем! Вы выиграли главный приз!")
-        }else{
+        } else {
             println("Вы выиграли утешительный приз!")
         }
-    }else{
+    } else {
         println("Неудача!")
     }
 }
