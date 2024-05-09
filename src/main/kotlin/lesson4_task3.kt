@@ -1,19 +1,23 @@
+const val CONDITION_IS_SUNNY: Boolean = true
+const val CONDITION_AWNING_IS_OPEN: Boolean = true
+const val CONDITION_HUMIDITY: Int = 20
+const val CONDITION_SEASON: String = "не зима"
+
+
 
 
 fun main() {
-    val conditionSunWeather: Boolean = true
-    val conditionOutdoorOwning: Boolean = true
-    val conditionHumidity: Int = 20
-    val conditionSeason: String = "не зима"
 
-    val todaySunWeather: Boolean = true
-    val todayOutdoorOwning: Boolean = true
+
+
+    val todayIsSunny: Boolean = true
+    val todayAwningIsOpen: Boolean = true
     val todayHumidity: Int = 20
     val todaySeason: String = "зима"
 
-    println("Благоприятные ли условия сейчас для роста бобовых? ${conditionSunWeather == todaySunWeather
-            && conditionOutdoorOwning == todayOutdoorOwning && conditionHumidity == todayHumidity
-            && conditionSeason == todaySeason}")
+    println("Благоприятные ли условия сейчас для роста бобовых? ${CONDITION_IS_SUNNY == todayIsSunny && 
+            CONDITION_AWNING_IS_OPEN == todayAwningIsOpen && CONDITION_HUMIDITY == todayHumidity && 
+            CONDITION_SEASON == todaySeason}")
 }
 
 
