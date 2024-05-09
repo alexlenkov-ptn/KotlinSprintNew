@@ -6,16 +6,18 @@ const val CONDITION_SEASON: String = "не зима"
 
 fun main() {
 
-
-
     val todayIsSunny: Boolean = true
     val todayAwningIsOpen: Boolean = true
     val todayHumidity: Int = 20
     val todaySeason: String = "зима"
 
-    println("Благоприятные ли условия сейчас для роста бобовых? ${CONDITION_IS_SUNNY == todayIsSunny && 
-            CONDITION_AWNING_IS_OPEN == todayAwningIsOpen && CONDITION_HUMIDITY == todayHumidity && 
-            CONDITION_SEASON == todaySeason}")
+    println(
+        "Благоприятные ли условия сейчас для роста бобовых? ${
+            CONDITION_IS_SUNNY == todayIsSunny &&
+                    CONDITION_AWNING_IS_OPEN == todayAwningIsOpen && CONDITION_HUMIDITY == todayHumidity &&
+                    CONDITION_SEASON == todaySeason
+        }"
+    )
 }
 
 
