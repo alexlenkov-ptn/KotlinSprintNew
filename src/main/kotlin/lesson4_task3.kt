@@ -4,8 +4,6 @@ const val CONDITION_HUMIDITY: Int = 20
 const val CONDITION_SEASON: String = "не зима"
 
 
-
-
 fun main() {
 
 
