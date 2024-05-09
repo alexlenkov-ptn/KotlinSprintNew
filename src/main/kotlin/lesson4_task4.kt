@@ -4,12 +4,14 @@ const val DAY = 1
 fun main() {
     val dayNumber = 5
 
-    println("""
+    println(
+        """
         Упражнения для рук: ${dayNumber == TRAIN_DAY_NUMBER_FIVE}
         Упражнения для ног: ${dayNumber != TRAIN_DAY_NUMBER_FIVE && dayNumber != TRAIN_DAY_NUMBER_FIVE + DAY}
         Упражнения для спины: ${dayNumber != TRAIN_DAY_NUMBER_FIVE && dayNumber != TRAIN_DAY_NUMBER_FIVE + DAY}
         Упражнения для пресса: ${dayNumber == TRAIN_DAY_NUMBER_FIVE}
-    """.trimIndent())
+    """.trimIndent()
+    )
 }
 
 // D1 - руки, пресс D2 - отдых D3 - ноги, спина D4 - отдых D5 руки, пресс
