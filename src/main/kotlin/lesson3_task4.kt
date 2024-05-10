@@ -1,11 +1,13 @@
 fun main() {
     val positionNumber = 2
     val positionLetter = "D"
-    val moveNumber = 5
+    val moveNumber = 5.toString()
 
-    println("Фигура двинулась вперед с позиции $positionLetter$positionNumber на позицию " +
-            "$positionLetter${positionNumber+1} " +
-            "Номер хода: $moveNumber")
+    println(
+        "Фигура двинулась вперед с позиции $positionLetter${positionNumber.toString()} на позицию " +
+                "$positionLetter${(positionNumber + 1).toString()} " +
+                "Номер хода: $moveNumber"
+    )
 
     /*
     Задача 4 к Уроку 3.
