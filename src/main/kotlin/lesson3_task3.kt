@@ -1,18 +1,20 @@
 fun main() {
     val count = 9
 
-    print("""
-        |$count * 1 = ${count*1}
-        |$count * 2 = ${count*2}
-        |$count * 3 = ${count*3}
-        |$count * 4 = ${count*4}
-        |$count * 5 = ${count*5}
-        |$count * 6 = ${count*6}
-        |$count * 7 = ${count*7}
-        |$count * 8 = ${count*8}
-        |$count * 9 = ${count*9}
+    print(
+        """
+        |$count * 1 = ${count * 1}
+        |$count * 2 = ${count * 2}
+        |$count * 3 = ${count * 3}
+        |$count * 4 = ${count * 4}
+        |$count * 5 = ${count * 5}
+        |$count * 6 = ${count * 6}
+        |$count * 7 = ${count * 7}
+        |$count * 8 = ${count * 8}
+        |$count * 9 = ${count * 9}
 
-    """.trimMargin())
+    """.trimMargin()
+    )
 
     /*
     Задача 3 к Уроку 3
