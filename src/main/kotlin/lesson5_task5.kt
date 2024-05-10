@@ -5,8 +5,8 @@ fun main() {
     val listRandom: List<Int> = listOf((LOWER_RANGE..UPPER_RANGE).random(),
         (LOWER_RANGE..UPPER_RANGE).random(),
         (LOWER_RANGE..UPPER_RANGE).random())
-    val list = listOf(readln().toInt(), readln().toInt(), readln().toInt())
-    val intersection = listRandom.intersect(list)
+    val userList = listOf(readln().toInt(), readln().toInt(), readln().toInt())
+    val intersection = listRandom.intersect(userList)
 
     val result = when(intersection.size) {
         3 -> "Вы угадали 3 числа и выигрываете джекпот"
