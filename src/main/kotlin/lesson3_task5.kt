@@ -1,20 +1,10 @@
 fun main() {
     val position = "D2-D4;0"
 
-    val positionLetterFrom = position.substring(0,1)
-    val positionNumberFrom = position.substring(1,2).toInt()
+    val splitStrPointComma = position.split(";")
+    val splitStrLine = splitStrPointComma[0].split("-")
 
-    val positionLetterWhere = position.substring(3,4)
-    val positionNumberWhere = position.substring(4,5).toInt()
-
-    val moveNumber = position.substring(6)
-
-    print("""
-        $positionLetterFrom$positionNumberFrom
-        $positionLetterWhere$positionNumberWhere
-        $moveNumber
-    """.trimIndent())
-
+    println(splitStrLine[0] + "\n" + splitStrLine[1] + "\n" + splitStrPointComma[1])
 
     /*
     Задача 5* к Уроку 3
