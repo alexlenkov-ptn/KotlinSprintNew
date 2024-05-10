@@ -1,6 +1,6 @@
 fun main() {
     println("Введите первое число")
-    val firstCount = readLine()!!.toInt()
+    val firstCount = readln().toInt()
     println("Введите второе число")
     val secondCount = readLine()!!.toInt()
     println("Введите сумму чисел $firstCount и $secondCount")
