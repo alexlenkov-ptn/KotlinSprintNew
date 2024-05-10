@@ -4,9 +4,9 @@ const val SECOND_TRUE_COUNT = 0
 
 fun main() {
     println("Введите первое число")
-    val firstUserCount = readLine()!!.toInt()
+    val firstUserCount = readln().toInt()
     println("Введите второе число")
-    val secondUserCount = readLine()!!.toInt()
+    val secondUserCount = readln().toInt()
 
     if (firstUserCount == FIRST_TRUE_COUNT ||
         secondUserCount == SECOND_TRUE_COUNT ||
