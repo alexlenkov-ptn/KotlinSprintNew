@@ -6,7 +6,7 @@ fun main() {
     val calendar: Calendar = Calendar.getInstance()
     val year = calendar.get(Calendar.YEAR)
     println("Введите год рождения")
-    val yearOfBirth = readLine()!!.toInt()
+    val yearOfBirth = readln().toInt()
 
 
     if ((year - yearOfBirth) >= FULL_AGE) {
