@@ -2,9 +2,9 @@ fun main() {
     println("Введите первое число")
     val firstCount = readln().toInt()
     println("Введите второе число")
-    val secondCount = readLine()!!.toInt()
+    val secondCount = readln().toInt()
     println("Введите сумму чисел $firstCount и $secondCount")
-    val result = readLine()!!.toInt()
+    val result = readln().toInt()
 
     if (result == (firstCount + secondCount)) {
         println("Добро пожаловать!")
