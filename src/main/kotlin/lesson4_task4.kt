@@ -2,14 +2,19 @@ const val TRAIN_DAY_NUMBER_FIVE = 5
 const val DAY = 1
 
 fun main() {
-    val dayNumber = 6
+    val dayNumber = 5
+    val isEven = if(dayNumber % 2 == 0) {
+        true
+    }else {
+        false
+    } // Реализация флага
 
     println(
         """
-        Упражнения для рук: ${dayNumber % 2 != 0}
-        Упражнения для ног: ${dayNumber % 2 == 0}
-        Упражнения для спины: ${dayNumber % 2 == 0}
-        Упражнения для пресса: ${dayNumber % 2 != 0}
+        Упражнения для рук: ${!isEven}
+        Упражнения для ног: ${isEven}
+        Упражнения для спины: ${isEven}
+        Упражнения для пресса: ${!isEven}
     """.trimIndent()
     )
 }
