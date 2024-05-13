@@ -10,7 +10,7 @@ fun main() {
         arrayIngredients.set(i, userIngredient)
     }
 
-    println("Вы ввели такие ингредиенты")
+    println("Вы ввели такие ингредиенты:")
     for (i in arrayIngredients) {
         println("Ингредиент №${numberOfIngredient + 1}: $i")
         numberOfIngredient++
