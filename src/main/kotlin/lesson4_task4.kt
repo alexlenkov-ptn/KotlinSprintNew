@@ -3,12 +3,7 @@ const val DAY = 1
 
 fun main() {
     val dayNumber = 5
-    val isEven = if(dayNumber % 2 == 0) {
-        true
-    }else {
-        false
-    } // Реализация флага
-
+    val isEven = dayNumber % 2 == 0
     println(
         """
         Упражнения для рук: ${!isEven}
