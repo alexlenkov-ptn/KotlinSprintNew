@@ -1,43 +1,36 @@
 fun main() {
-    var userName: String
-    var userPassword: String
-    var name: String
-    var password: String
+    var userNameRegistration: String
+    var userPasswordRegistration: String
+    var userNameAutorizatiion: String
+    var userPasswordAutorization: String
+
+    println("Для регистрации введите логин")
+    userNameRegistration = readln().toString()
+    println("Укажите пароль")
+    userPasswordRegistration = readln().toString()
 
     do {
-        println("Для регистрации введите логин")
-        userName = readln().toString()
-        println("Укажите пароль")
-        userPassword = readln().toString()
         println("Система загружается...")
         Thread.sleep(1000)
         println(
             "Пройдите авторизацию. " +
                     "\nВведите логин:"
         )
-        name = readln().toString()
+        userNameAutorizatiion = readln().toString()
         println("Введите пароль:")
-        password = readln().toString()
+        userPasswordAutorization = readln().toString()
 
-        val compareResult: Boolean = if (name == userName && password == userPassword) {
+        val compareResult: Boolean = if (userNameAutorizatiion == userNameRegistration && userPasswordAutorization ==
+            userPasswordRegistration) {
             true
         } else {
             false
         }
-        if (compareResult == true) {
-            println("Вы успешно авторизовались в системе")
-        } else {
+        if (compareResult == false) {
             println("На каком-то из этапов вы совершили ошибку. Попробуйте пройти процесс заново")
         }
 
     } while (!compareResult)
+    println("Вы успешно авторизовались в системе")
+
 }
-
-/*
-На этапе авторизации в приложении пользователь, не имея аккаунта, выбрал регистрацию.
-Нужно создать блок программы, который сначала предлагает создать логин и пароль,
-затем запрашивает их, чтобы войти в приложение.
-
-Если логин или пароль введены неверно – данные запрашиваются заново.
-Если данные верны, выводится сообщение – “Авторизация прошла успешно”.
- */
