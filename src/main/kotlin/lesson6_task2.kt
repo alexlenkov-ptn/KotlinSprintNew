@@ -2,20 +2,8 @@ const val ONE_SECOND: Long = 1000
 
 fun main() {
     println("Введите количество секунд для таймера")
-    val timerSeconds: Int = readln().toInt()
-    var i = 0
-
-    while (i <= timerSeconds) {
-        Thread.sleep(ONE_SECOND)
-        i++
-    }
+    val timerSeconds: Long = readln().toLong()
+    val seconds: Long = timerSeconds * ONE_SECOND
+    Thread.sleep(seconds)
     println("Прошло $timerSeconds сек.")
 }
-
-/*
-Задача 2 к Уроку 6
-
-Создай простой таймер, который запрашивает у пользователя количество секунд, которые нужно засечь.
-По истечении заданного времени, выведется сообщение в консоли: “Прошло N секунд”.
-Где N – количество секунд, введенных пользователем. Программа должна вставать на паузу.
- */
