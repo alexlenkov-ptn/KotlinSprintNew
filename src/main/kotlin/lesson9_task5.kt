@@ -33,3 +33,4 @@ fun main() {
 }
 
 const val NULL_POSITION = 0
+
