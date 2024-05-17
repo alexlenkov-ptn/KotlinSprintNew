@@ -12,6 +12,7 @@ fun main() {
         tries--
         if (countRandom == countResult) {
             println("Это была великолепная игра!")
+            break
         } else {
             println("Неверно!")
         }
@@ -19,7 +20,7 @@ fun main() {
 
 }
 
-const val LOWER_RANGE = 0
+const val LOWER_RANGE = 1
 const val UPPER_RANGE = 9
 const val HALF_SECOND: Long = 500
 
