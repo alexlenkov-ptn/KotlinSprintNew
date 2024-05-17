@@ -20,12 +20,8 @@ fun main() {
         println("Введите пароль:")
         userPasswordAutorization = readln().toString()
 
-        val compareResult: Boolean = if (userNameAutorizatiion == userNameRegistration && userPasswordAutorization ==
-            userPasswordRegistration) {
-            true
-        } else {
-            false
-        }
+        val compareResult: Boolean = userNameAutorizatiion == userNameRegistration && userPasswordAutorization ==
+            userPasswordRegistration
         if (compareResult == false) {
             println("На каком-то из этапов вы совершили ошибку. Попробуйте пройти процесс заново")
         }
