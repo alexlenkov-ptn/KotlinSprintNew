@@ -2,22 +2,33 @@ fun main() {
 
     var tries = 3
 
-    do {
-        val countRandomFirst = (LOWER_RANGE..UPPER_RANGE).random()
-        val countRandomSecond = (LOWER_RANGE..UPPER_RANGE).random()
-        println("Докажите, что вы не бот. Введите ответ примера: $countRandomFirst + $countRandomSecond")
-        val userCount = readln().toInt()
-        tries--
-        if ((countRandomFirst + countRandomSecond) == userCount) {
-            println("Ответ правильный. Вы можете войти в систему")
-        } else if (tries == 0) {
-            println("Доступ запрещен")
-        } else {
-            println("Ответ неправильный. Осталось попыток: $tries")
-        }
-    } while (((countRandomFirst + countRandomSecond) != userCount) && tries != 0)
+    var countRandomFirst: Int = 0
+    var countRandomSecond: Int = 0
+    var userCount: Int = 0
+    var sumCounts: Int = 0
 
+    do {
+        countRandomFirst = (LOWER_RANGE..UPPER_RANGE).random()
+        countRandomSecond = (LOWER_RANGE..UPPER_RANGE).random()
+        sumCounts = countRandomFirst + countRandomSecond
+
+        println("Докажите, что вы не бот. Введите ответ примера: $countRandomFirst + $countRandomSecond")
+        userCount = readln().toInt()
+
+        if(userCount == sumCounts) break
+
+        tries--
+        if (tries < 3) println("Ответ неправильный. Осталось попыток: $tries")
+
+    } while (tries > 0)
+
+    if ((countRandomFirst + countRandomSecond) == userCount) {
+        println("Ответ правильный. Вы можете войти в систему")
+    } else {
+        println("Доступ запрещен")
+    }
 
 }
+
 const val LOWER_RANGE = 1
 const val UPPER_RANGE = 9
