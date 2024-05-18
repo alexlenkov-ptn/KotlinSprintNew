@@ -3,8 +3,8 @@ fun main() {
     val rangeChar = 'a'..'z'
 
     for (i in RANGE_PASSWORD_MIN..RANGE_PASSWORD_MAX) {
-        val randomCountFor = (NULL..ONE).random()
-        if (randomCountFor == NULL) {
+        val randomCountFor = (0..1).random()
+        if (randomCountFor == 0) {
             print(rangeInt.random())
         } else {
             print(rangeChar.random())
@@ -14,6 +14,3 @@ fun main() {
 
 const val RANGE_PASSWORD_MIN = 0
 const val RANGE_PASSWORD_MAX = 5
-
-const val NULL = 0
-const val ONE = 1
