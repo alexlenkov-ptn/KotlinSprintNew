@@ -1,23 +1,13 @@
 fun main() {
     val rangeMax = readln().toInt()
 
-    for (i in rangeMin..rangeMax) {
+    for (i in RANGE_MIN..rangeMax) {
         println("Прошло времени, секунд: $i; Осталось времени, секунд: ${rangeMax - i}")
-        Thread.sleep(second)
+        Thread.sleep(SECOND)
         if (i == rangeMax)
             println("Время вышло")
     }
 }
 
-const val rangeMin = 0
-const val second: Long = 1000
-
-/*
-3адача 4 к Уроку 7
-
-Cоздай таймер, который сперва запрашивает у пользователя количество секунд, которые нужно засечь.
-
- – таймер должен показывать каждую секунду, сколько времени осталось до конца;
- – по истечении времени, вывести сообщение в консоль: “Время вышло”;
- – таймер должен быть написан, используя цикл for.
- */
+const val RANGE_MIN = 0
+const val SECOND: Long = 1000
