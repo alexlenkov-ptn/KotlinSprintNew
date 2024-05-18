@@ -15,7 +15,7 @@ fun main() {
         println("Докажите, что вы не бот. Введите ответ примера: $countRandomFirst + $countRandomSecond")
         userCount = readln().toInt()
 
-        if(userCount == sumCounts) break
+        if (userCount == sumCounts) break
 
         tries--
         if (tries < 3) println("Ответ неправильный. Осталось попыток: $tries")
