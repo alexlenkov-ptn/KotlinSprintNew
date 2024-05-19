@@ -20,7 +20,7 @@ fun main() {
         for (i in 3..lengthPassword - 1) {
             password.add(rangeAll.random().toString())
         }
-    }while (lengthPassword <= MIN_LENGTH_PASSWORD)
+    } while (lengthPassword <= MIN_LENGTH_PASSWORD)
 
     password.shuffle()
 
