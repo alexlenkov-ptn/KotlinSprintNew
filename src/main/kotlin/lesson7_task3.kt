@@ -2,14 +2,8 @@ fun main() {
     println("Введите число:")
     val rangeMax = readln().toInt()
 
-    for (i in rangeMin..rangeMax step 2) {
-        if (i % 2 == 0 && i != 0) {
-            println(i)
-        } else {
-            continue
-        }
+    for (i in 0..rangeMax step 2) {
+        println(i)
     }
 
 }
-
-const val rangeMin = 0
