@@ -36,8 +36,6 @@ fun generateDice(): Int {
 const val MIN_RESULT_DICE = 1
 const val MAX_RESULT_DICE = 6
 const val userPositiveAnswer = "да"
-const val HALF_SECOND: Long = 500
-
 
 
 
