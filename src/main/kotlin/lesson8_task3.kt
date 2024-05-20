@@ -4,7 +4,7 @@ fun main() {
     println("Напишите какой ингредиент вы хотите найти:")
     val userIngredient = readln().toString().toLowerCase()
 
-    if (arrayIngredients.indexOf(userIngredient) >= 0) {
+    if(userIngredient in arrayIngredients) {
         println("Ингредиент $userIngredient есть в таблице")
     } else {
         println("Такого ингредиента нет в таблице")
