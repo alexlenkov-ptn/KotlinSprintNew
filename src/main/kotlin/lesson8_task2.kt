@@ -4,14 +4,12 @@ fun main() {
     println("Напишите какой ингредиент вы хотите найти:")
     val userIngredient = readln().toString().toLowerCase()
 
-    for (i in MIN_ARRAY_RANGE..(arrayIngredients.size - 1)) {
-        if (arrayIngredients[i] == userIngredient) {
-            println("Ингредиент ${arrayIngredients[i]} в рецепте есть")
-            break
-        } else if ((arrayIngredients[i] != userIngredient) && (i == (arrayIngredients.size - 1))) {
-            println("Такого ингредиента в таблице нет.")
+    for (i in arrayIngredients) {
+        if (i == userIngredient) {
+            return println("Ингредиент $i в рецепте есть")
         }
     }
+    println("Такого ингредиента в таблице нет.")
 }
 
 const val POTATO = "картошка"
