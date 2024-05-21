@@ -11,7 +11,7 @@ fun main() {
         id = 2,
         login = "dan",
         mail = "dan@outlook.com",
-        password = "0000"
+        password = "0000",
     )
 
     println(user1.id)
