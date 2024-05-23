@@ -9,7 +9,7 @@ fun main() {
             userIngredient = readln().toString().toLowerCase()
             mutableListOfIngredients.add(userIngredient)
         } else {
-            while (true) {
+            while (i in countIngredients) {
                 println("Укажите ингредиент №$i")
                 userIngredient = readln().toString().toLowerCase()
                 if (mutableListOfIngredients.contains(userIngredient)) {
@@ -22,14 +22,9 @@ fun main() {
             }
         }
     }
-
-
     mutableListOfIngredients = mutableListOfIngredients.sorted().toMutableList()
-
     mutableListOfIngredients.set(NULL_POSITION, mutableListOfIngredients[NULL_POSITION].capitalize())
-
     println(mutableListOfIngredients)
-
 }
 
 const val NULL_POSITION = 0
