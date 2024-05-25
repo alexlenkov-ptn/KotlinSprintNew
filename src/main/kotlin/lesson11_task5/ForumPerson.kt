@@ -6,10 +6,5 @@ class ForumPerson(
     var userId: Int,
     var userName: String,
 ) {
-    fun createNewUser(userName: String) {
-        userId = Random.nextInt()
-        this.userName = userName
-
-    }
 
 }
