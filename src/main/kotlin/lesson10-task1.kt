@@ -5,9 +5,9 @@ fun main() {
     println("Человек бросил кубик. Выпало $peopleThrow")
     if (computerThrow > peopleThrow) {
         println("Победили машины")
-    }else if (computerThrow == peopleThrow) {
+    } else if (computerThrow == peopleThrow) {
         println("Боевая ничья")
-    }else {
+    } else {
         println("Победило человечество")
     }
 }
