@@ -3,11 +3,9 @@ fun main() {
 
     println("В рецепте есть следующие ингредиенты:")
 
-
     listIngredients.forEach() {
         println(it)
     }
-
 }
 
 const val POTATO = "картошка"
