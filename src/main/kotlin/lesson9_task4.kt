@@ -3,13 +3,7 @@ fun main() {
     val userFiveIngredients = readln().toString().toLowerCase()
     val mutableListOfFiveIngredients: MutableList<String> = mutableListOf()
     val list = userFiveIngredients.split(delim)
-
-    for(i in list) {
-        mutableListOfFiveIngredients.add(i)
-    }
-
-    println(mutableListOfFiveIngredients.sorted())
-
+    println(list.sorted())
 }
 
 const val delim = ", "
