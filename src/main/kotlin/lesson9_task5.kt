@@ -1,30 +1,32 @@
 fun main() {
     val countIngredients = 1..5
     var userIngredient: String = ""
-    var mutableListOfIngredients: MutableList<String> = mutableListOf()
+    var mutableSetOfIngredients: MutableSet<String> = mutableSetOf()
+    var listOfIngredients: List<String>
+    var firstElement: String = ""
 
-    for (i in countIngredients) {
-        if (mutableListOfIngredients.isEmpty()) {
+        for (i in countIngredients) {
+        if (mutableSetOfIngredients.isEmpty()) {
             println("Укажите ингредиент №$i")
             userIngredient = readln().toString().toLowerCase()
-            mutableListOfIngredients.add(userIngredient)
+            mutableSetOfIngredients.add(userIngredient)
         } else {
             while (i in countIngredients) {
                 println("Укажите ингредиент №$i")
                 userIngredient = readln().toString().toLowerCase()
-                if (mutableListOfIngredients.contains(userIngredient)) {
+                if (mutableSetOfIngredients.contains(userIngredient)) {
                     println("Ингредиент $userIngredient уже был. Введите, пожалуйста, другой")
                     continue
                 } else {
-                    mutableListOfIngredients.add(userIngredient)
+                    mutableSetOfIngredients.add(userIngredient)
                     break
                 }
             }
         }
     }
-    mutableListOfIngredients = mutableListOfIngredients.sorted().toMutableList()
-    mutableListOfIngredients.set(NULL_POSITION, mutableListOfIngredients[NULL_POSITION].capitalize())
-    println(mutableListOfIngredients)
+    mutableSetOfIngredients = mutableSetOfIngredients.sorted().toMutableSet()
+    // mutableSetOfIngredients.set(NULL_POSITION, mutableSetOfIngredients[NULL_POSITION].capitalize())
+    println(mutableSetOfIngredients)
 }
 
 const val NULL_POSITION = 0
