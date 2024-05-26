@@ -13,6 +13,5 @@ fun main() {
 }
 
 fun throwDice() = (MIN_COUNT_DICE..MAX_COUNT_DICE).random()
-
 const val MIN_COUNT_DICE = 1
 const val MAX_COUNT_DICE = 6
