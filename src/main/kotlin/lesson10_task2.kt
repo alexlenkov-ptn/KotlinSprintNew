@@ -3,13 +3,15 @@ fun main() {
     val userName = readln().toString()
     println("Введите пароль")
     val userPassword = readln().toString()
-    checkPassAndInfo(userName, userPassword)
+
+    if (checkString(userName) && checkString(userPassword)) println("Вход успешный")
+        else println("Пароль или логин менее 4 символов")
+
 }
 
-fun checkPassAndInfo(userName: String, userPassword: String) {
-    if (userName.length < MIN_LENGTH || userPassword.length < MIN_LENGTH) {
-        println("Логин или пароль недостаточно длинные")
-    }
+fun checkString(string: String): Boolean {
+    if (string.length >= MIN_LENGTH) return true
+    else return false
 }
 
 const val MIN_LENGTH = 4
