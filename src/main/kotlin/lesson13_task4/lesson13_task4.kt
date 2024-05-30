@@ -14,7 +14,6 @@ fun main() {
         userAnswer = readln().toString().toLowerCase()
     }
 
-
     listOfContact.forEach {
         println(it)
     }
