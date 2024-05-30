@@ -9,12 +9,7 @@ fun main() {
         val name = readln().toString().capitalize()
         val number = readln().toLongOrNull() ?: println("Вы не ввели номер телефона")
         val company = readln()?.toString() ?: null
-
         val user: TelephoneList
-
-
-
-
         println("Продолжить заполнение базы? Да / Нет")
         userAnswer = readln().toString().toLowerCase()
     }
