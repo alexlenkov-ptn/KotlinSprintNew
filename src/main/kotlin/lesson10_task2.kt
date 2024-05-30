@@ -9,9 +9,6 @@ fun main() {
 
 }
 
-fun checkString(string: String): Boolean {
-    if (string.length >= MIN_LENGTH) return true
-    else return false
-}
+fun checkString(string: String): Boolean = string.length >= MIN_LENGTH
 
 const val MIN_LENGTH = 4
