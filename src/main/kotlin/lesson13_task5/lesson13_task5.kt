@@ -4,22 +4,18 @@ fun main() {
     var userAnswer: String = ""
     val listOfContact: List<TelephoneList> = listOf()
 
-    while (userAnswer != ANSWER_NO) {
-        println("Введите номер телефона:")
-        val name = readln().toString().capitalize()
-        val number = readln().toString()
+    println("Введите номер телефона:")
+    val number = readln().toString()
+    try {
         number.toLong()
-
-
-        val company = readln()?.toString() ?: null
-        val user: TelephoneList
-        println("Продолжить заполнение базы? Да / Нет")
-        userAnswer = readln().toString().toLowerCase()
+    } catch (e: Exception) {
+        println(e)
     }
 
-    listOfContact.forEach {
-        println(it)
-    }
+    println("Введите имя:")
+    val name = readln().toString().capitalize()
+    number.toLong()
+
+    println("Введите название компании:")
+    val company = readln()?.toString() ?: null
 }
-
-val ANSWER_NO = "нет"
