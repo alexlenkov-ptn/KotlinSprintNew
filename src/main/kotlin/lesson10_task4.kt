@@ -1,4 +1,3 @@
-
 fun main() {
     var humanResultDice: Int
     var computerResultDice: Int
@@ -13,31 +12,28 @@ fun main() {
 
         userAnswer = readln().toLowerCase()
 
-        if(humanResultDice > computerResultDice) humanWins++
+        if (humanResultDice > computerResultDice) humanWins++
         else if (humanResultDice < computerResultDice) computerWins++
 
-    }while (userAnswer == userPositiveAnswer)
+    } while (userAnswer == USER_POSITIVE_ANSWER)
 
-    println("Игра закончилась со счётом: \n" +
-            "Человечество: $humanWins \n" +
-            "Компьютеры: $computerWins")
+    println(
+        "Игра закончилась со счётом: \n" +
+                "Человечество: $humanWins \n" +
+                "Компьютеры: $computerWins"
+    )
 }
 
 fun startRound(humanResultDice: Int?, computerResultDice: Int?) {
-    println("Человечество сделало свой ход. Выпало число: $humanResultDice \n" +
-            "Машины сделали свой ход. Выпало число: $computerResultDice \n" +
-            "Хотите продолжить раунд? Да / Нет")
+    println(
+        "Человечество сделало свой ход. Выпало число: $humanResultDice \n" +
+                "Машины сделали свой ход. Выпало число: $computerResultDice \n" +
+                "Хотите продолжить раунд? Да / Нет"
+    )
 }
 
-fun generateDice(): Int {
-    return (MIN_RESULT_DICE..MAX_RESULT_DICE).random().toInt()
-}
+fun generateDice(): Int = (MIN_RESULT_DICE..MAX_RESULT_DICE).random().toInt()
 
 const val MIN_RESULT_DICE = 1
 const val MAX_RESULT_DICE = 6
-const val userPositiveAnswer = "да"
-
-
-
-
-
+const val USER_POSITIVE_ANSWER = "да"
