@@ -12,16 +12,6 @@ fun main() {
 
     user1.changePassword()
 
-    showInformation(user1)
+    user1.showInformation()
 
-}
-
-fun showInformation(user: User2) {
-    println(
-        "Id: ${user.id} \n" +
-                "Login: ${user.login} \n" +
-                "Mail: ${user.mail} \n" +
-                "Password: ${user.password} \n" +
-                "Bio: ${user.bio}"
-    )
 }

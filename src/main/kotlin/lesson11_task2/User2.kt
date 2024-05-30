@@ -24,4 +24,15 @@ class User2(
             println("Пароль неверный")
         }
     }
+
+    fun showInformation() {
+        println(
+            "Id: ${id} \n" +
+                    "Login: ${login} \n" +
+                    "Mail: ${mail} \n" +
+                    "Password: ${password} \n" +
+                    "Bio: ${bio}"
+        )
+    }
+
 }
