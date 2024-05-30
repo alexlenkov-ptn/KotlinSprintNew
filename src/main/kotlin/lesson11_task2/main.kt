@@ -8,12 +8,20 @@ fun main() {
         password = "0000",
         bio = "Владислав. Живу в Краснодаре. 23 года"
     )
-
-
     user1.setBio()
 
     user1.changePassword()
 
-    user1.showInformation(user1.id, user1.login, user1.mail, user1.password, user1.bio)
+    showInformation(user1)
 
+}
+
+fun showInformation(user: User2) {
+    println(
+        "Id: ${user.id} \n" +
+                "Login: ${user.login} \n" +
+                "Mail: ${user.mail} \n" +
+                "Password: ${user.password} \n" +
+                "Bio: ${user.bio}"
+    )
 }

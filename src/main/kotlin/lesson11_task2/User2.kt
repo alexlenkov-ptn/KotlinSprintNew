@@ -1,22 +1,12 @@
 package lesson11_task2
 
 class User2(
-        val id: Int,
-        val login: String,
-        val mail: String,
-        var password: String,
-        var bio: String,
-    ) {
-    fun showInformation(id: Int?, login: String?, mail: String?, password: String?, bio: String?) {
-        println(
-            "Id: $id \n" +
-                    "Login: $login \n" +
-                    "Mail: $mail \n" +
-                    "Password: $password \n" +
-                    "Bio: $bio"
-        )
-    }
-
+    val id: Int,
+    val login: String,
+    val mail: String,
+    var password: String,
+    var bio: String,
+) {
     fun setBio() {
         println("Введите новое био")
         val newBio = readln().toString()
