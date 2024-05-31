@@ -1,11 +1,12 @@
 package lesson12_task3
 
-class Weather (val dayTemperatureKelvin: Int,
-               val nightTemperatureKelvin: Int,
-               val isRain: Boolean,) {
+class Weather (dayTemperatureKelvin: Int,
+               nightTemperatureKelvin: Int,
+               isRain: Boolean,) {
 
     val dayTemperatureCelsium: Int = dayTemperatureKelvin - KELVIN_TO_CELSIUM.toInt()
     val nightTemperatureCelsium: Int = nightTemperatureKelvin - KELVIN_TO_CELSIUM.toInt()
+    val isRain: Boolean = isRain
 
     fun printWeather() {
         println("дневная температура в цельсиях: $dayTemperatureCelsium \n" +
