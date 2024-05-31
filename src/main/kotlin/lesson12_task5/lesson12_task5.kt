@@ -32,6 +32,3 @@ fun createDaysOfTemperature(): Weather {
     return dayWeather
 }
 
-fun List<Int>.average(): Int {
-    return this.sum() / this.size
-}
