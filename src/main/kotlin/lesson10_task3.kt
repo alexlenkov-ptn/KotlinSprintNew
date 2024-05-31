@@ -7,8 +7,7 @@ fun main() {
 }
 
 fun generatePassword(passwordSize: Int): String { // Явно указали, что функция возвращает String
-
-    val rangeOfSpecialCymbol = charArrayOf('!', '\'', '#', '\\', '\$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/')
+    val rangeOfSpecialCymbol = ' '..'/'
     val rangePassword = 0..9
 
     var password: String = ""
@@ -25,4 +24,3 @@ fun generatePassword(passwordSize: Int): String { // Явно указали, ч
 }
 
 const val COUNT_ONE = 1
-const val COUNT_NULL = 0
