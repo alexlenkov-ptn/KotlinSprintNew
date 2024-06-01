@@ -1,4 +1,4 @@
-package lesson12_task3
+package lesson12_task4
 
 class Weather (dayTemperatureKelvin: Int,
                nightTemperatureKelvin: Int,
