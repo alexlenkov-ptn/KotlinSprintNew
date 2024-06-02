@@ -17,3 +17,68 @@ fun main() {
     println()
     icebreaker.loadCargo()
 }
+
+open class Liner_14_2(
+    // Поля по умолчанию
+    var name: String = "Liner",
+    var speed: Int = 10,
+    var loadCapacity: Int = 20,
+    var passengerCapacity: Int = 50,
+    var areBreakIce: Boolean = false,
+) {
+    // speed
+    // loadCapacity - грузоподъёмность
+    // passengerCapacity - вместительность пассажиров
+    // areBreakIce - ломают лёд (true / false)
+    open fun loadCargo() {
+        println("Горизонтальный трап со шкафута выдвинут")
+    }
+
+    fun printShipInfo() {
+        println(
+            """
+            Данные корабля: ${name}
+            Скорость: ${speed}
+            Вместимость: ${loadCapacity}
+            Грузоподъёмность: ${loadCapacity}
+            Вместимость пассажиров: ${passengerCapacity}
+            Возможность ломать лёд: ${areBreakIce}
+        """.trimIndent()
+        )
+    }
+}
+
+class CargoShip_14_2(
+    // Поля по умолчанию
+    name: String = "Cargo Ship",
+    speed: Int = 5,
+    loadCapacity: Int = 40,
+) : Liner_14_2(
+    name = name,
+    speed = speed,
+    loadCapacity = loadCapacity,
+) {
+
+    override fun loadCargo() {
+        println("Погрузочный кран активирован")
+    }
+}
+
+class Icebraker_14_2(
+    // Поля по умолчанию
+    name: String = "Icebreaker",
+    speed: Int = 3,
+    passengerCapacity: Int = 10,
+    areBreakIce: Boolean = true,
+) : Liner_14_2(
+    name = name,
+    speed = speed,
+    passengerCapacity = passengerCapacity,
+    areBreakIce = areBreakIce,
+) {
+
+    override fun loadCargo() {
+        println("Кормовые ворота открыты")
+    }
+
+}
