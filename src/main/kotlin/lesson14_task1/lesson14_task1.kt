@@ -30,3 +30,41 @@ fun main() {
     """.trimIndent()
     )
 }
+
+open class Liner(
+    // Поля по умолчанию
+    var name: String = "Liner",
+    var speed: Int = 10,
+    var loadCapacity: Int = 20,
+    var passengerCapacity: Int = 50,
+    var areBreakIce: Boolean = false,
+) {
+    // speed
+    // loadCapacity - грузоподъёмность
+    // passengerCapacity - вместительность пассажиров
+    // areBreakIce - ломают лёд (true / false)
+}
+
+class CargoShip(
+    // Поля по умолчанию
+    name: String = "Cargo Ship",
+    speed: Int = 5,
+    loadCapacity: Int = 40,
+) : Liner(name = name,
+    speed = speed,
+    loadCapacity = loadCapacity,) {
+
+}
+
+class Icebraker (
+    // Поля по умолчанию
+    name: String = "Icebreaker",
+    speed: Int = 3,
+    passengerCapacity: Int = 10,
+    areBreakIce: Boolean = true,
+) : Liner(name = name,
+    speed = speed,
+    passengerCapacity = passengerCapacity,
+    areBreakIce = areBreakIce,) {
+
+}
