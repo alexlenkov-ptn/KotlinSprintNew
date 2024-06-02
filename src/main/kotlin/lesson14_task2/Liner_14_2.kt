@@ -17,13 +17,15 @@ open class Liner_14_2(
     }
 
     fun printShipInfo() {
-        println("""
+        println(
+            """
             Данные корабля: ${name}
             Скорость: ${speed}
             Вместимость: ${loadCapacity}
             Грузоподъёмность: ${loadCapacity}
             Вместимость пассажиров: ${passengerCapacity}
             Возможность ломать лёд: ${areBreakIce}
-        """.trimIndent())
+        """.trimIndent()
+        )
     }
 }
