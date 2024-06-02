@@ -1,6 +1,7 @@
 package lesson11_task4
 
 class CategoryOfRecipe(
+    val imageUrlCategory: String,
     val classicBurger: Recipe,
     val cheeseburger: Recipe,
     val burgerMushroomsCheese: Recipe,
@@ -9,6 +10,7 @@ class CategoryOfRecipe(
     val burgerBacon: Recipe,
     val burgerVegan: Recipe,
     val burgerSpicy: Recipe,
+    val countsOfRecipes: Int,
 ) {
 
 }
