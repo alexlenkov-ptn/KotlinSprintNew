@@ -7,8 +7,10 @@ fun main() {
     val user2 = factory.createNewUser(2, "Pavel")
     val message1 = factory.createNewMessage(1, "I am Dmitry")
     val message2 = factory.createNewMessage(2, "I am Pavel")
+
     forum.addUserForum(user1)
     forum.addUserForum(user2)
+
     forum.addMessageForum(message1)
     forum.addMessageForum(message2)
 
