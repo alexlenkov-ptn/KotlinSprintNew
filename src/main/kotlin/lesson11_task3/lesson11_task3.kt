@@ -42,8 +42,6 @@ class Room(
     }
 
     fun updateUserStatus(userName: String, status: String) {
-        // Проверить что пользователь есть в списке - готово
-        // Создать поиск по имени, а не ссылке
 
         val listOfUserName: Map<String, User> = listOfUsers.associateBy { it.name }
 
@@ -55,7 +53,6 @@ class Room(
                 statusLowerCase == STATUS_TALKING ||
                 statusLowerCase == STATUS_MICROPHONE_OFF
             ) {
-
                 val user: User? = listOfUserName[userName]
                 user?.status = statusLowerCase
             } else {
@@ -64,8 +61,6 @@ class Room(
         } else {
             println("Пользователя с таким именем не существует")
         }
-
-
     }
 }
 
