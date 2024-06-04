@@ -3,7 +3,7 @@ package lesson14_task1
 fun main() {
     val liner: Liner = Liner()
     val cargoShip: CargoShip = CargoShip()
-   val icebreaker: Icebraker = Icebraker()
+    val icebreaker: Icebraker = Icebraker()
 
     println(
         """
@@ -32,7 +32,6 @@ fun main() {
 }
 
 open class Liner(
-    // Поля по умолчанию
     var name: String = "Liner",
     var speed: Int = 10,
     var loadCapacity: Int = 20,
@@ -40,31 +39,31 @@ open class Liner(
     var areBreakIce: Boolean = false,
 ) {
     // speed
-    // loadCapacity - грузоподъёмность
-    // passengerCapacity - вместительность пассажиров
-    // areBreakIce - ломают лёд (true / false)
 }
 
 class CargoShip(
-    // Поля по умолчанию
     name: String = "Cargo Ship",
     speed: Int = 5,
     loadCapacity: Int = 40,
-) : Liner(name = name,
+) : Liner(
+    name = name,
     speed = speed,
-    loadCapacity = loadCapacity,) {
+    loadCapacity = loadCapacity,
+) {
 
 }
 
-class Icebraker (
+class Icebraker(
     // Поля по умолчанию
     name: String = "Icebreaker",
     speed: Int = 3,
     passengerCapacity: Int = 10,
     areBreakIce: Boolean = true,
-) : Liner(name = name,
+) : Liner(
+    name = name,
     speed = speed,
     passengerCapacity = passengerCapacity,
-    areBreakIce = areBreakIce,) {
+    areBreakIce = areBreakIce,
+) {
 
 }
