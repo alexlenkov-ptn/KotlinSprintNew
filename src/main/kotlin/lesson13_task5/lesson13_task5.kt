@@ -8,8 +8,8 @@ fun main() {
     val number = readln().toString()
     try {
         number.toLong()
-    } catch (e: Exception) {
-        println(e)
+    } catch (e: NumberFormatException) {
+        throw IllegalArgumentException("Введенное значение не является числом: $number", e)
     }
 
     println("Введите имя:")
@@ -27,13 +27,17 @@ class TelephoneList_13_5(
 ) {
     val name = _name
     val number = _number
-    val company = _company ?: "не указано"
+    val company = _company ?: null
 
     fun printInfo() {
         println(
             "- Имя: $name \n" +
                     "- Номер: $number \n" +
-                    "- Компания: $company"
+                    "- Компания: ${if (company == null)
+                        "не указано"
+                    else
+                        company
+                    }"
         )
     }
 }
