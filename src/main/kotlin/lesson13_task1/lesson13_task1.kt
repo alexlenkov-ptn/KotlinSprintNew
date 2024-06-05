@@ -1,10 +1,10 @@
 package lesson13_task1
 
 fun main() {
-    val vitaly = TelephoneList("vitaly", "test", null)
+    val vitaly = TelephoneList_13_1("vitaly", "test", null)
 }
 
-class TelephoneList(
+class TelephoneList_13_1(
     _name: String,
     _company: String,
     _number: Long?,
