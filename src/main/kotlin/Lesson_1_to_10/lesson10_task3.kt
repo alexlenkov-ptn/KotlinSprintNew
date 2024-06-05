@@ -1,3 +1,5 @@
+package Lesson_1_to_10
+
 fun main() {
     println("Введите длину пароля: ")
     val passwordSize = readln().toInt()
