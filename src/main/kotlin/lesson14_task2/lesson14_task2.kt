@@ -44,7 +44,6 @@ open class Liner_14_2(
 }
 
 class CargoShip_14_2(
-    // Поля по умолчанию
     name: String = "Cargo Ship",
     speed: Int = 5,
     loadCapacity: Int = 40,
@@ -75,5 +74,4 @@ class Icebraker_14_2(
     override fun loadCargo() {
         println("Кормовые ворота открыты")
     }
-
 }
