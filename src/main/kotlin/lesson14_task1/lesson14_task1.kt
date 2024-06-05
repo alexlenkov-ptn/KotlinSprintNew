@@ -37,9 +37,7 @@ open class Liner(
     var loadCapacity: Int = 20,
     var passengerCapacity: Int = 50,
     var areBreakIce: Boolean = false,
-) {
-    // speed
-}
+)
 
 class CargoShip(
     name: String = "Cargo Ship",
@@ -49,12 +47,9 @@ class CargoShip(
     name = name,
     speed = speed,
     loadCapacity = loadCapacity,
-) {
-
-}
+)
 
 class Icebraker(
-    // Поля по умолчанию
     name: String = "Icebreaker",
     speed: Int = 3,
     passengerCapacity: Int = 10,
@@ -64,6 +59,4 @@ class Icebraker(
     speed = speed,
     passengerCapacity = passengerCapacity,
     areBreakIce = areBreakIce,
-) {
-
-}
+)
