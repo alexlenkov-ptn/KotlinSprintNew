@@ -17,10 +17,6 @@ class TelephoneList_13_2(
     fun printInfo() {
         println("- Имя: $name \n" +
                 "- Номер: $number \n" +
-                "- Компания: ${if (company == null) 
-                    "не указано"
-                    else
-                    company
-                }")
-    }
+                "- Компания: ${ company ?: "не указано"}")
+                }
 }
