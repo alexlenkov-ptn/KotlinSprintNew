@@ -52,10 +52,11 @@ class Forum() {
     }
     fun printThread() {
         ListOfForumUsers.forEach() {
-            println("автор: ${it.userName}")
-        }
-        ListOfForumMessage.forEach() {
-            println("сообщение: ${it.message}")
+            val userId = it.userId
+            print("Автор ${it.userName}: ")
+            ListOfForumMessage.map() {
+                if (it.authorId == userId) println(it.message)
+            }
         }
     }
 }
