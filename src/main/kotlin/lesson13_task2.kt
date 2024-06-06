@@ -12,7 +12,7 @@ class TelephoneList_13_2(
 ) {
     val name = _name
     val number = _number
-    val company = _company?:null
+    val company = _company
 
     fun printInfo() {
         println("- Имя: $name \n" +
