@@ -11,11 +11,10 @@ fun main() {
 
     val companies = listOfContact.mapNotNull() {
         it.company
-    }
-
-    companies.forEach() {
+    }.forEach() {
         println(it)
     }
+
 }
 
 class TelephoneList_13_3(
