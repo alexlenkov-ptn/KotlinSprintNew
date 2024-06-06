@@ -9,7 +9,7 @@ fun main() {
 
     val listOfContact: List<TelephoneList_13_3> = listOf(person1, person2, person3, person4, person5)
 
-    val companies = listOfContact.mapNotNull() {
+    listOfContact.mapNotNull() {
         it.company
     }.forEach() {
         println(it)
