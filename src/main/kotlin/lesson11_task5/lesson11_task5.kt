@@ -50,11 +50,12 @@ class Forum() {
     fun addUserForum(user: ForumPerson) {
         ListOfForumUsers.add(user)
     }
+
     fun addMessageForum(message: ForumMessage) {
         ListOfForumMessage.add(message)
     }
-    fun printThread() {
 
+    fun printThread() {
         ListOfForumMessage.forEach() {
             val message = it.message
             val authorId = it.authorId
@@ -62,7 +63,5 @@ class Forum() {
                 if (it.userId == authorId) println("${it.userName}: $message")
             }
         }
-
-        //todo функцию нужно скорректировать
     }
 }
