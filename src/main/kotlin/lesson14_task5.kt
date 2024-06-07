@@ -1,5 +1,3 @@
-import kotlin.random.Random
-
 fun main() {
     val chat = Chat()
     chat.addMessage("Привет, я Valery", "Valery")
@@ -25,7 +23,7 @@ fun main() {
     )
 
     chat.addThreadMessage(
-        3,
+        10,
         "Это комментарий 3",
         "Valery 3"
     )
@@ -37,9 +35,11 @@ fun main() {
 class Chat() {
     val mutableListOfMessages: MutableList<Message> = mutableListOf()
     val mutableListOfThreadMessage: MutableList<ChildMessage> = mutableListOf()
+    var idCounter = 0
 
     fun addMessage(text: String, authorName: String) {
-        val message = Message(messageId = Random.nextInt(0, Int.MAX_VALUE), message = text, authorName = authorName)
+        val message = Message(messageId = idCounter, message = text, authorName = authorName)
+        idCounter++
         mutableListOfMessages.add(message)
     }
 
@@ -48,8 +48,9 @@ class Chat() {
             messageId = messageId,
             message = childMessage,
             authorName = authorName,
-            childMessageId = Random.nextInt(0, Int.MAX_VALUE)
+            childMessageId = idCounter
         )
+        idCounter++
         mutableListOfThreadMessage.add(message)
     }
 
