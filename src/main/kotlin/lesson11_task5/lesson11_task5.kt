@@ -5,14 +5,17 @@ fun main() {
     val factory: ForumPersonFactory = ForumPersonFactory()
     val user1 = factory.createNewUser(1, "Dmitry")
     val user2 = factory.createNewUser(2, "Pavel")
+
     val message1 = factory.createNewMessage(1, "I am Dmitry")
     val message2 = factory.createNewMessage(2, "I am Pavel")
+    val message3 = factory.createNewMessage(1, "I am Dmitry")
 
     forum.addUserForum(user1)
     forum.addUserForum(user2)
 
     forum.addMessageForum(message1)
     forum.addMessageForum(message2)
+    forum.addMessageForum(message3)
 
     forum.printThread()
 }
@@ -51,12 +54,15 @@ class Forum() {
         ListOfForumMessage.add(message)
     }
     fun printThread() {
-        ListOfForumUsers.forEach() {
-            val userId = it.userId
-            print("Автор ${it.userName}: ")
-            ListOfForumMessage.map() {
-                if (it.authorId == userId) println(it.message)
+
+        ListOfForumMessage.forEach() {
+            val message = it.message
+            val authorId = it.authorId
+            ListOfForumUsers.map() {
+                if (it.userId == authorId) println("${it.userName}: $message")
             }
         }
+
+        //todo функцию нужно скорректировать
     }
 }
