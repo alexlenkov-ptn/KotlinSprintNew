@@ -1,9 +1,9 @@
 package lesson14_task1
 
 fun main() {
-    val liner: Liner = Liner()
-    val cargoShip: CargoShip = CargoShip()
-    val icebreaker: Icebraker = Icebraker()
+    val liner: Liner_14_1 = Liner_14_1()
+    val cargoShip: CargoShip_14_1 = CargoShip_14_1()
+    val icebreaker: Icebraker_14_1 = Icebraker_14_1()
 
     println(
         """
@@ -31,7 +31,7 @@ fun main() {
     )
 }
 
-open class Liner(
+open class Liner_14_1(
     var name: String = "Liner",
     var speed: Int = 10,
     var loadCapacity: Int = 20,
@@ -39,22 +39,22 @@ open class Liner(
     var areBreakIce: Boolean = false,
 )
 
-class CargoShip(
+class CargoShip_14_1(
     name: String = "Cargo Ship",
     speed: Int = 5,
     loadCapacity: Int = 40,
-) : Liner(
+) : Liner_14_1(
     name = name,
     speed = speed,
     loadCapacity = loadCapacity,
 )
 
-class Icebraker(
+class Icebraker_14_1(
     name: String = "Icebreaker",
     speed: Int = 3,
     passengerCapacity: Int = 10,
     areBreakIce: Boolean = true,
-) : Liner(
+) : Liner_14_1(
     name = name,
     speed = speed,
     passengerCapacity = passengerCapacity,
