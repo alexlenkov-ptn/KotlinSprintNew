@@ -25,11 +25,12 @@ abstract class Bird(
         print(name)
     }
 }
+
 class Seagull(
     name: String = "Чайка"
 ) : Bird(name)
 
-class Duck (
+class Duck(
     name: String = "Утка"
 ) : Bird(name)
 
