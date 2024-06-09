@@ -1,49 +1,52 @@
 fun main() {
     val seagull = Seagull()
-    seagull.showName()
-    seagull.move()
+    seagull.printName()
+    seagull.moveFlying()
 
     val duck = Duck()
-    duck.showName()
-    duck.move()
+    duck.printName()
+    duck.moveFlying()
+    duck.printName()
+    duck.moveSwimming()
 
     val carp = Carp()
-    carp.showName()
-    carp.move()
+    carp.printName()
+    carp.moveSwimming()
 }
 
 interface Flying {
-    fun move() {
+    fun moveFlying() {
         println(" летит")
     }
 }
 
-abstract class Bird(
-    val name: String,
-) : Flying {
-    fun showName() {
-        print(name)
+interface Swimming {
+    fun moveSwimming() {
+        println(" плывет")
     }
 }
 
 class Seagull(
-    name: String = "Чайка"
-) : Bird(name)
-
-class Duck(
-    name: String = "Утка"
-) : Bird(name)
-
-interface Swimming {
-    fun move() {
-        print(" плывет")
+    _name: String = "Чайка"
+) : Flying {
+    val name = _name
+    fun printName() {
+        print(name)
     }
 }
 
+class Duck(
+    _name: String = "Утка"
+) : Flying, Swimming {
+    val name = _name
+    fun printName() = print(name)
+}
+
 class Carp(
-    val name: String = "Карась"
+    val _name: String = "Карась",
 ) : Swimming {
-    fun showName() {
+    val name = _name
+    fun printName() {
         print(name)
     }
 }
