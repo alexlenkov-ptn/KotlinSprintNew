@@ -13,6 +13,7 @@ abstract class WeatherStationStats()
 class Temperature(_count: Int) : WeatherStationStats() {
     val count = _count
 }
+
 class PrecipitationAmount(_count: Int) : WeatherStationStats() {
     val count = _count
 }
