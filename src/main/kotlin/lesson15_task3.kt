@@ -14,7 +14,6 @@ fun main() {
     adm.deleteForumUser(user)
 }
 
-
 abstract class User(val name: String) {
     fun readMessage() = println("Пользователь <$name> читает сообщение")
     fun printForumMessage(message: String) = println(message)
