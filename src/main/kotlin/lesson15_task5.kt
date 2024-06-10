@@ -1,34 +1,123 @@
 fun main() {
+    val truck = Truck("Грузовик")
+    val car = PassengerCar("Легковой автомобиль")
+    truck.boardPassenger(1)
+    truck.loadTheCargo(2)
+    truck.moveToEnd()
+    truck.dropOffPassenger(1)
+    truck.unloadCargo(2)
+    truck.moveToStart()
+
+    car.boardPassenger(3)
+    car.moveToEnd()
+    car.dropOffPassenger(3)
+
+    truck.boardPassenger(1)
+    truck.moveToEnd()
+    truck.dropOffPassenger(1)
+
 
 }
 
-/*
-Задача 5* к Уроку 15
+interface CarMove {
+    fun moveToEnd()
+    fun moveToStart()
+}
 
-В логике мобильной игры есть грузовые и легковые автомобили с такими параметрами:
+interface ActionWithPassenger {
+    fun boardPassenger(count: Int)
+    fun dropOffPassenger(count: Int)
+}
 
-- грузовые машины могут перевозить одного пассажира и 2 тонны груза;
-- легковые не перевозят груз, но могут вместить до 3 пассажиров.
+interface ActionWithCargo {
+    fun loadTheCargo(count: Int)
+    fun unloadCargo(count: Int)
+}
 
-Создай интерфейсы, обеспечивающие передвижение машин, перевозку пассажиров и перевозку грузов.
+abstract class Car(val name: String) : CarMove, ActionWithPassenger, ActionWithCargo {
+    override fun moveToEnd() {
+        println("$name едет к конечной точке")
+    }
 
-- учитывай максимальное и текущее количество перевозимых людей или грузов;
-- интерфейсы должны содержать методы загрузки и разгрузки пассажиров или грузов.
+    override fun moveToStart() {
+        println("$name возвращается к начальной точке")
+    }
+}
 
-Спроектируй классы и несколько объектов. Вызови их методы, «перевезя» таким образом 6 человек и 2 тонны груза.
- */
+class Truck(name: String) : Car(name) {
+    val maxPassenger = 1
+    val maxCargo = 2
+    var countPassenger = 0
+    var countCargo = 0
 
-/*
-Будут такие классы:
-Абстрактный Автомобили - а зачем и для чего (чтобы назначить им одинаковые поля - груз и пассажиры)
-Грузовые
-Легковые
-Пассажиры (пустой класс)
-Груз (с полем количества тонн)
+    override fun boardPassenger(count: Int) {
+        println("Рассаживаем пассажиров...")
+        countPassenger += count
+        conditionPassenger(countPassenger, maxPassenger)
+    }
 
-Интерфейсы:
-Передвижение машин
-Перевозка пассажиров
-Перевозка грузов
+    override fun dropOffPassenger(count: Int) {
+        println("Выпускаем пассажиров...")
+        countPassenger -= count
+        conditionPassenger(countPassenger, maxPassenger)
+    }
 
- */
+    override fun loadTheCargo(count: Int) {
+        println("Загружаем груз")
+        countCargo += count
+        conditionPassenger(countCargo, maxCargo)
+    }
+
+    override fun unloadCargo(count: Int) {
+        println("Выгружаем груз")
+        countCargo -= count
+        conditionCargo(countCargo, maxCargo)
+    }
+}
+
+class PassengerCar(name: String) : Car(name) {
+    val maxPassenger = 3
+    val maxCargo = 0
+    var countPassenger = 0
+    var countCargo = 0
+
+    override fun boardPassenger(count: Int) {
+        println("Рассаживаем пассажиров...")
+        countPassenger += count
+        conditionPassenger(countPassenger, maxPassenger)
+    }
+
+    override fun dropOffPassenger(count: Int) {
+        println("Выпускаем пассажиров...")
+        countPassenger -= count
+        conditionPassenger(countPassenger, maxPassenger)
+    }
+
+    override fun loadTheCargo(count: Int) {
+        println("Загрузить груз в легковую машину невозможно")
+    }
+
+    override fun unloadCargo(count: Int) {
+        println("Нельзя выгрузить несуществующий груз")
+    }
+}
+
+fun conditionPassenger(countToBoard: Int, countMax: Int) {
+    if (countToBoard <= countMax) {
+        print("Количество пассажиров: ${countToBoard}, из возможных: ${countMax}. ")
+        println("Можем ехать")
+    } else {
+        print("Количество пассажиров: ${countToBoard}, из возможных: ${countMax}. ")
+        println("Ехать запрещено")
+    }
+}
+
+fun conditionCargo(countToBoard: Int, countMax: Int) {
+    if (countToBoard <= countMax) {
+        print("Количество тонн груза: ${countToBoard}, из возможных: ${countMax}. ")
+        println("Можем ехать")
+    } else {
+        print("Количество тонн груза: ${countToBoard}, из возможных: ${countMax}. ")
+        println("Ехать запрещено")
+    }
+}
