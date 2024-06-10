@@ -15,8 +15,6 @@ fun main() {
     truck.boardPassenger(1)
     truck.moveToEnd()
     truck.dropOffPassenger(1)
-
-
 }
 
 interface CarMove {
