@@ -24,11 +24,11 @@ class WeatherServer() {
     val precipitationAmountName = "Количество осадков"
 
     fun addStat(stats: WeatherStationStats) {
-            when (stats) {
-                is Temperature -> mutableMapStat[temperatureName] = stats.count
-                is PrecipitationAmount -> mutableMapStat[precipitationAmountName] = stats.count
-                else -> println("Мы не знаем что это такое")
-            }
+        when (stats) {
+            is Temperature -> mutableMapStat[temperatureName] = stats.count
+            is PrecipitationAmount -> mutableMapStat[precipitationAmountName] = stats.count
+            else -> println("Мы не знаем что это такое")
+        }
     }
 }
 
