@@ -1,4 +1,4 @@
-package lesson14_task1
+package lesson14
 
 fun main() {
     val liner: Liner_14_1 = Liner_14_1()
