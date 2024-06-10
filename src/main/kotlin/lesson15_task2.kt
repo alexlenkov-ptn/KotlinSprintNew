@@ -10,26 +10,25 @@ fun main() {
 
 abstract class WeatherStationStats()
 
-class Temperature(_count: Int) : WeatherStationStats() {
-    val count = _count
+class Temperature(count: Int) : WeatherStationStats() {
+    val count = count
 }
 
-class PrecipitationAmount(_count: Int) : WeatherStationStats() {
-    val count = _count
+class PrecipitationAmount(count: Int) : WeatherStationStats() {
+    val count = count
 }
 
 class WeatherServer() {
     val mutableMapStat: MutableMap<String, Int> = mutableMapOf()
     val temperatureName = "Температура"
     val precipitationAmountName = "Количество осадков"
+
     fun addStat(stats: WeatherStationStats) {
-        if (stats is Temperature) {
-            mutableMapStat[temperatureName] = stats.count
-        } else if (stats is PrecipitationAmount) {
-            mutableMapStat[precipitationAmountName] = stats.count
-        } else {
-            println("Мы не знаем что это такое")
-        }
+            when (stats) {
+                is Temperature -> mutableMapStat[temperatureName] = stats.count
+                is PrecipitationAmount -> mutableMapStat[precipitationAmountName] = stats.count
+                else -> println("Мы не знаем что это такое")
+            }
     }
 }
 
