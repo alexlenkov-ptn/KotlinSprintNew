@@ -12,19 +12,20 @@ fun main() {
 
 }
 
-interface Search {
-    fun searchAccessory() {
-    }
+interface Searching {
+    fun searchAccessory()
 }
 
-class Instrument(val name: String,
-                 val count: Int) : Search {
+abstract class Goods (val name: String, val count: Int)
+
+class Instrument(name: String,
+                 count: Int) : Goods(name, count), Searching {
     override fun searchAccessory() {
         println("Выполняется поиск для инструмента $name...")
     }
 }
 
-class Accessory(val name: String,
-                val count: Int) {
+class Accessory(name: String,
+                count: Int) : Goods(name, count) {
     fun printInfo() = println("$name: $count шт.")
 }
