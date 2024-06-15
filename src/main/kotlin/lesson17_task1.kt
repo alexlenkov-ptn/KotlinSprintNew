@@ -4,10 +4,10 @@ fun main() {
 
 class Quiz(question: String,
            answer: String) {
-    val question = question
+    val question: String = question
         get() = field
 
-    var answer = answer
+    var answer: String = answer
         get() = field
         set(value: String) {
             field = value
