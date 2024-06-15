@@ -9,7 +9,6 @@ class User(
 ) {
 
     fun checkPassword(password: String): Boolean {
-        if (password == this.password) return true
-        else return false
+        return password == this.password
     }
 }
