@@ -2,7 +2,8 @@ fun main() {
 
 }
 
-class Quiz() {
+class Quiz(question: String,
+           answer: String) {
     val question: String
         get() = ""
 
