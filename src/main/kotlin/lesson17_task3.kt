@@ -1,8 +1,14 @@
 fun main() {
     val folderSecret = Folder("folder secret", 2, true)
     val folder = Folder("folder", 5, false)
-    folderSecret.name
-    folder.name
+    println(
+        "${folderSecret.name}\n" +
+                "${folderSecret.numberFiles}"
+    )
+    println(
+        "${folder.name}\n" +
+                "${folder.numberFiles}"
+    )
 }
 
 class Folder(
@@ -10,18 +16,13 @@ class Folder(
     numberFiles: Int,
     isSecret: Boolean,
 ) {
-
-    val name: String = name
-        get() = if (isSecret == true) println(
-            "Скрытая папка\n" +
-                    "Количество файлов - 0"
-        ).toString()
-        else println(
-            "Папка <$field>\n" +
-                    "Количество файлов - ${numberFiles}"
-        ).toString()
-
-    private val numberFiles = numberFiles
+    private val nameSecret: String = "Секретная папка"
     private val isSecret = isSecret
 
+    val name: String = name
+        get() = if (isSecret == true) nameSecret
+        else field
+    val numberFiles = numberFiles
+        get() = if (isSecret == true) 0
+        else field
 }
