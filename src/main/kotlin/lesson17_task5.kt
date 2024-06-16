@@ -10,7 +10,6 @@ class User(
     login: String,
     password: String,
 ) {
-    private val changedPassword = password.replace(password, "${"*".repeat(password.length)}")
 
     var login = login
         set(value: String) {
@@ -18,8 +17,8 @@ class User(
             println("Логин успешно изменен")
         }
 
-    var password
-        get() = changedPassword
+    var password = password
+        get() = field.replace(field, "${"*".repeat(field.length)}")
         set(value: String) {
             println("Вы не можете изменить пароль")
         }
