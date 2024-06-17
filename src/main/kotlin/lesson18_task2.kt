@@ -14,12 +14,12 @@ fun main() {
 abstract class Dice() {
     open fun dropDice() {}
     open fun printResult() {}
+    var result = 0
 }
 
 class DiceFourSides() : Dice() {
-    var result = 0
     override fun dropDice() {
-        result = Random.nextInt(1,4)
+        result = Random.nextInt(1, 4)
     }
 
     override fun printResult() {
@@ -28,9 +28,8 @@ class DiceFourSides() : Dice() {
 }
 
 class DiceSixSides() : Dice() {
-    var result = 0
     override fun dropDice() {
-        result = Random.nextInt(1,6)
+        result = Random.nextInt(1, 6)
     }
 
     override fun printResult() {
@@ -39,9 +38,8 @@ class DiceSixSides() : Dice() {
 }
 
 class DiceEightSides() : Dice() {
-    var result = 0
     override fun dropDice() {
-        result = Random.nextInt(1,8)
+        result = Random.nextInt(1, 8)
     }
 
     override fun printResult() {
