@@ -8,8 +8,7 @@ fun main() {
     }
 }
 
-abstract class Animal(name: String) {
-    val name = name
+abstract class Animal(val name: String) {
     open var food: String = ""
     open fun sleep() {}
     open fun eat() {}
