@@ -11,7 +11,7 @@ fun main() {
 
 open class Package() {
     open fun calculateArea() {}
-}   
+}
 
 class PackageCube(
     length: Int,
@@ -23,14 +23,10 @@ class PackageCube(
 }
 
 class PackageRectangle(
-    length: Int,
-    width: Int,
-    height: Int
+    val length: Int,
+    val width: Int,
+    val height: Int
 ) : Package() {
-    private val length = length
-    private val width = width
-    private val height = height
-
     override fun calculateArea() {
         println(length * width * height)
     }
