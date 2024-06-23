@@ -14,11 +14,11 @@ open class Package() {
 }
 
 class PackageCube(
-    length: Int,
+    val length: Int,
 ) : Package() {
-    private val length = length.toDouble()
+    private val lengthToDouble = length.toDouble()
     override fun calculateArea() {
-        println((length.pow(3)).toInt())
+        println((lengthToDouble.pow(3)).toInt())
     }
 }
 
