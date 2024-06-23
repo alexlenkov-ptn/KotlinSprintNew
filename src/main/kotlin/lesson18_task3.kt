@@ -8,14 +8,18 @@ fun main() {
     }
 }
 
-abstract class Animal(val name: String) {
-    open var food: String = ""
-    open fun sleep() {}
-    open fun eat() {}
+abstract class Animal(
+    val name: String,
+    val food: String
+) {
+    abstract fun sleep()
+    abstract fun eat()
 }
 
-class Fox(name: String) : Animal(name) {
-    override var food = "ягоды"
+class Fox(
+    name: String,
+    food: String = "ягоды"
+) : Animal(name, food) {
     override fun eat() {
         println("$name ест $food")
     }
@@ -25,8 +29,10 @@ class Fox(name: String) : Animal(name) {
     }
 }
 
-class Dog(name: String) : Animal(name) {
-    override var food = "кости"
+class Dog(
+    name: String,
+    food: String = "кости"
+) : Animal(name, food) {
     override fun eat() {
         println("$name ест $food")
     }
@@ -36,8 +42,10 @@ class Dog(name: String) : Animal(name) {
     }
 }
 
-class Cat(name: String) : Animal(name) {
-    override var food = "рыб"
+class Cat(
+    name: String,
+    food: String = "рыб"
+) : Animal(name, food) {
     override fun eat() {
         println("$name ест $food")
     }
