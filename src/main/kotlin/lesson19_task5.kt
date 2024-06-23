@@ -37,7 +37,7 @@ class Person(
     val gender: Gender,
 )
 
-fun returnGender(genderName: String) : Gender {
+fun returnGender(genderName: String): Gender {
     if (genderName == Gender.MAN.name) {
         return Gender.MAN
     } else if (genderName == Gender.WOMAN.name) {
