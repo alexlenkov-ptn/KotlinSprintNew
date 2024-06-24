@@ -1,7 +1,5 @@
 fun main() {
     val listOfPerson: MutableList<Person> = mutableListOf()
-
-
     for (i in 0..4) {
         var gender: Gender
         println("Введите имя в формате строки")
