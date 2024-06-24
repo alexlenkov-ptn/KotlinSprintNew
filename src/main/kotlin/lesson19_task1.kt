@@ -1,8 +1,9 @@
 import java.util.*
 
 fun main() {
-    for (fish in AquariumSimulator.entries) {
-        println(fish.toString())
+    val enumSet: Set<AquariumSimulator> = AquariumSimulator.values().toSet()
+    enumSet.forEach() {
+        println(it)
     }
 }
 
