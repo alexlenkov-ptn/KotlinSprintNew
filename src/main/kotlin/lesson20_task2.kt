@@ -1,7 +1,8 @@
 fun main() {
     val player = Player("Carl J", 60)
     player.showInfo()
-    val heal: (Player) -> Unit = fun(player: Player) {
+
+    val heal: (Player) -> Unit = { player: Player ->
         val healPoint = 50
         player.changeHealth(healPoint)
     }
