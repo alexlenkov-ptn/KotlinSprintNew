@@ -1,7 +1,8 @@
 import java.util.*
+import kotlin.enums.EnumEntries
 
 fun main() {
-    val enumSet: Set<AquariumSimulator> = AquariumSimulator.values().toSet()
+    val enumSet: List<AquariumSimulator> = AquariumSimulator.entries
     enumSet.forEach() {
         println(it)
     }
