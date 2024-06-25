@@ -9,5 +9,4 @@ fun main() {
     checkKey(player)
     checkKey(player2)
 }
-
 class Player(val isKeyAvailable: Boolean)
