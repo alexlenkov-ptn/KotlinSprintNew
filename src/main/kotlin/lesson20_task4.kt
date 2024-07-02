@@ -8,10 +8,8 @@ fun main() {
         lambda(it)
     }
 
-    val printEvenNumbers: () -> Unit = fun() {
-        for (i in listOfLambda.indices) {
-            if (((i + 1) % 2) == 0) println(listOfLambda[i])
-        }
+    val printEvenNumbers: () -> Unit = {
+        for (i in listOfLambda.indices) if (((i + 1) % 2) == 0) println(listOfLambda[i])
     }
     printEvenNumbers()
 }
