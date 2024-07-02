@@ -1,7 +1,7 @@
 fun main() {
     val list: List<String> = listOf(
         "первая строка", "вторая строка", "третья строка", "четвертая строка",
-        "пятая строка")
+        "пятая строка", "шестая строка")
 
     val listOfLambda: List<String> = list.map {
         val lambda: (String) -> String = {"Нажат элемент <$it>"}
