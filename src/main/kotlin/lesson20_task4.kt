@@ -2,14 +2,17 @@ fun main() {
     val list: List<String> = listOf(
         "первая строка", "вторая строка", "третья строка", "четвертая строка",
         "пятая строка")
-    val lambda: (String) -> String = {"Нажат элемент <$it>"}
+
     val listOfLambda: List<String> = list.map {
+        val lambda: (String) -> String = {"Нажат элемент <$it>"}
         lambda(it)
     }
 
-    listOfLambda.forEach() {
-
+    val printEvenNumbers: () -> Unit = fun() {
+        for (i in listOfLambda.indices) {
+            if (((i + 1) % 2) == 0) println(listOfLambda[i])
+        }
     }
-
+    printEvenNumbers()
 }
 
