@@ -3,13 +3,11 @@ fun main() {
         "первая строка", "вторая строка", "третья строка", "четвертая строка",
         "пятая строка", "шестая строка")
 
-    val listOfLambda: List<String> = list.map {
-        val lambda: (String) -> String = {"Нажат элемент <$it>"}
-        lambda(it)
+    val listOfLambda = list.map {
+        str: String -> {println("Нажат элемент <$str>")}
     }
-
     val printEvenNumbers: () -> Unit = {
-        for (i in listOfLambda.indices) if (((i + 1) % 2) == 0) println(listOfLambda[i])
+        for (i in listOfLambda.indices) if (((i + 1) % 2) == 0) listOfLambda[i]()
     }
     printEvenNumbers()
 }
