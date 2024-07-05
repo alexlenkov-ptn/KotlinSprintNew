@@ -2,15 +2,12 @@ import kotlin.random.Random
 
 fun main() {
     val robot = Robot()
-    println(robot.say())
-    println(robot.setModifier())
-    println(robot.say())
+    robot.say()
+    robot.setModifier()
+    robot.say()
 }
 
 class Robot() {
-    fun say(): String {
-        return randomStringList()
-    }
 
     private var phrase1 = "Я робот"
     private var phrase2 = "Я готов выполнять команды"
@@ -20,10 +17,15 @@ class Robot() {
     private val list: List<String> = listOf(phrase1, phrase2, phrase3, phrase4, phrase5)
 
     private val randomStringList: () -> String = { list[Random.nextInt(0, list.size - 1)] }
+    private var modifier: String = randomStringList()
+
+    fun say() {
+        println(modifier)
+    }
 
     fun setModifier(
         invertor: (String) -> String = { it.reversed() }
     ) {
-        val invertorString = invertor(randomStringList.toString())
+        modifier = invertor(modifier)
     }
 }
