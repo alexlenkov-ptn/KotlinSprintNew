@@ -20,7 +20,7 @@ class Robot() {
     private var modifier = randomStringList
 
     fun say(
-        printPhrase: () -> String = {println(modifier()).toString()}
+        printPhrase: () -> Unit = {println(modifier()).toString()}
     ) {
         printPhrase()
     }
