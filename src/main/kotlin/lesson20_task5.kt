@@ -17,15 +17,17 @@ class Robot() {
     private val list: List<String> = listOf(phrase1, phrase2, phrase3, phrase4, phrase5)
 
     private val randomStringList: () -> String = { list[Random.nextInt(0, list.size - 1)] }
-    private var modifier: String = randomStringList()
+    private var modifier = randomStringList
 
-    fun say() {
-        println(modifier)
+    fun say(
+        printPhrase: () -> String = {println(modifier()).toString()}
+    ) {
+        printPhrase()
     }
 
     fun setModifier(
         invertor: (String) -> String = { it.reversed() }
     ) {
-        modifier = invertor(modifier)
+        
     }
 }
