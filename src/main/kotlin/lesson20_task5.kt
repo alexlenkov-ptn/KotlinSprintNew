@@ -16,7 +16,7 @@ class Robot() {
     private var phrase5 = "Меня программирует человек"
     private val list: List<String> = listOf(phrase1, phrase2, phrase3, phrase4, phrase5)
 
-    private val randomStringList: () -> String = { list[Random.nextInt(0, list.size - 1)] }
+    private val randomStringList: () -> String = { list[Random.nextInt(0, list.size)] }
     private var modifier = randomStringList
 
     fun say(
@@ -28,6 +28,6 @@ class Robot() {
     fun setModifier(
         invertor: (String) -> String = { it.reversed() }
     ) {
-        
+
     }
 }
