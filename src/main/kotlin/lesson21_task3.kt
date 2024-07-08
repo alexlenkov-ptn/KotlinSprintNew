@@ -21,7 +21,4 @@ class Player(
     }
 }
 
-fun Player.isHealthy() : Boolean {
-    if (this.health == this.healthMax) return true
-    else return false
-}
+fun Player.isHealthy() : Boolean = health == healthMax
