@@ -4,7 +4,6 @@ fun main() {
 }
 
 fun List<Int>.evenNumbersSum() : Int {
-        var count = 0
-        this.map { if (it % 2 == 0) count += it}
-        return count
+        val sum = this.filter { it % 2 == 0 }.sum()
+        return sum
 }
