@@ -1,5 +1,5 @@
 fun main() {
-    val player = Player(400)
+    val player = Player(100)
     println(player.mapExperienceAndSkills.maxCategory(player))
 }
 
