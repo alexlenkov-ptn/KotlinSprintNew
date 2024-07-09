@@ -3,9 +3,11 @@ fun main() {
 
     val (name, author, yearOfRelease) = dataBook1
 
-    println("$name\n" +
-            "$author\n" +
-            "$yearOfRelease")
+    println(
+        "$name\n" +
+                "$author\n" +
+                "$yearOfRelease"
+    )
 }
 
 data class DataBook(
