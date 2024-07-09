@@ -17,13 +17,13 @@ class Player(val experience: Int) {
 fun Map<String, Int>.maxCategory(player: Player) : String {
     // фильтрануть всё, что ниже значения опыта нашего игрок
     val experience = player.experience
-    var value: String = ""
+    var key: String = ""
 
     val mapFilter = this.filter { it.value <= experience }
 
-    mapFilter.map { if (it.value <= experience) value = it.key }
+    mapFilter.map { if (it.value <= experience) key = it.key }
 
-    return value
+    return key
 }
 
 // класс Player, который хранится Map (навыки)
