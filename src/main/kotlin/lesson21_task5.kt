@@ -14,7 +14,6 @@ class Player(val experience: Int) {
 }
 
 fun Map<String, Int>.maxCategory(player: Player): String? {
-    val mapFilter = this.filter { it.value <= player.experience }
-    val mapOfMax = mapFilter.maxByOrNull { it.value }
-    return mapOfMax?.key
+    val mapFilter = (this.filter { it.value <= player.experience }).maxByOrNull { it.value }
+    return mapFilter?.key
 }
