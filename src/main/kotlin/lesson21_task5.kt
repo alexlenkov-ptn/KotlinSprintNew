@@ -1,4 +1,3 @@
-
 fun main() {
     val player = Player(500)
     println(player.mapExperienceAndSkills)
@@ -7,14 +6,16 @@ fun main() {
 }
 
 class Player(val experience: Int) {
-    val mapExperienceAndSkills: Map<String, Int> = mapOf("Вампиризм" to 100,
+    val mapExperienceAndSkills: Map<String, Int> = mapOf(
+        "Вампиризм" to 100,
         "Призыв нежити" to 200,
         "Панацея" to 300,
         "Призыв стража смерти" to 500,
-        "Мир призраков" to 500)
+        "Мир призраков" to 500
+    )
 }
 
-fun Map<String, Int>.maxCategory(player: Player) : String {
+fun Map<String, Int>.maxCategory(player: Player): String {
     // фильтрануть всё, что ниже значения опыта нашего игрок
     val experience = player.experience
     var key: String = ""
@@ -25,5 +26,3 @@ fun Map<String, Int>.maxCategory(player: Player) : String {
 
     return key
 }
-
-// класс Player, который хранится Map (навыки)
